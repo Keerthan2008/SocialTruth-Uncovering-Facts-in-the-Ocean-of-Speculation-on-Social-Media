@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Non-Rumour Classification Result</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #000;
+        }
+        video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            min-width: 100%;
+            min-height: 100%;
+            z-index: -1;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.5); 
+            border-radius: 10px;
+            padding: 20px;
+            max-width: 400px;
+            text-align: center;
+            z-index: 1;
+        }
+        h2 {
+            color: #00ff00;
+            font-size: 28px;
+            margin-bottom: 20px;
+            transition: color 0.4s;
+        }
+        .container:hover h2 {
+            color: #33ff33;
+        }
+        .text {
+            color: #fff; 
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        .classify-another {
+            display: block;
+            text-decoration: none;
+            color: #007bff;
+            font-size: 16px;
+            margin-top: 20px;
+            transition: color 0.4s;
+        }
+        .classify-another:hover {
+            text-decoration: underline;
+            color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <video autoplay loop muted>
+        <source src="https://res.cloudinary.com/ddc6zwfxo/video/upload/v1710098030/SnapSave.io-Confetti_-_Green_Screen_Effect_zik07e.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="container">
+        <h2>Non-Rumour Classification Result</h2>
+        <p class="text">{{ text }}</p>
+        <a href="/" class="classify-another">Classify Another Comment</a>
+    </div>
+</body>
+</html>
